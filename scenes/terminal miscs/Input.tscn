@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnovoi2v2ctme"]
+
+[sub_resource type="Theme" id="Theme_pey5d"]
+
+[node name="Terminal Input" type="HBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+offset_right = 740.0
+offset_bottom = 38.0
+size_flags_vertical = 0
+
+[node name="Text" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(105, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "<User>/root>
+"
+fit_content = true
+vertical_alignment = 2
+
+[node name="Input" type="LineEdit" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme = SubResource("Theme_pey5d")
+theme_override_constants/caret_width = 10
+caret_blink = true
+caret_blink_interval = 0.5
