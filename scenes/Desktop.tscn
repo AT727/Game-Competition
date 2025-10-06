@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bd65klmkqlntn"]
 
-[ext_resource type="Texture2D" uid="uid://bu5b1h4d0mu7b" path="res://Assets/Desktop (2).png" id="1_osffw"]
-[ext_resource type="Script" uid="uid://b75h4rrksnjui" path="res://Scripts/desktop.gd" id="1_xnvl7"]
+[ext_resource type="Texture2D" uid="uid://bu5b1h4d0mu7b" path="res://assets/Desktop (2).png" id="1_osffw"]
+[ext_resource type="Script" uid="uid://b75h4rrksnjui" path="res://scripts/desktop.gd" id="1_xnvl7"]
 
 [node name="Desktop" type="Control"]
 layout_mode = 3
