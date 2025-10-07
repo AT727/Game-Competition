@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dshj0y74jtisv"]
+
+[node name="Shop_Ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -4.0
+offset_right = 2.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Main_Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox_Main_Content" type="VBoxContainer" parent="Main_Panel"]
+layout_mode = 2
+
+[node name="Control (Spacer)" type="Control" parent="Main_Panel/VBox_Main_Content"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Title_Label (Label1)" type="Label" parent="Main_Panel/VBox_Main_Content"]
+layout_mode = 2
+text = "Items to Buy"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Center_Item_Row (CenterContainer)" type="CenterContainer" parent="Main_Panel/VBox_Main_Content"]
+layout_mode = 2
+
+[node name="HBox_Items (HBoxContainer)" type="HBoxContainer" parent="Main_Panel/VBox_Main_Content/Center_Item_Row (CenterContainer)"]
+layout_mode = 2
+
+[node name="Item1" type="PanelContainer" parent="Main_Panel/VBox_Main_Content/Center_Item_Row (CenterContainer)/HBox_Items (HBoxContainer)"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Item2" type="PanelContainer" parent="Main_Panel/VBox_Main_Content/Center_Item_Row (CenterContainer)/HBox_Items (HBoxContainer)"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Item3" type="PanelContainer" parent="Main_Panel/VBox_Main_Content/Center_Item_Row (CenterContainer)/HBox_Items (HBoxContainer)"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="Item4" type="PanelContainer" parent="Main_Panel/VBox_Main_Content/Center_Item_Row (CenterContainer)/HBox_Items (HBoxContainer)"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2

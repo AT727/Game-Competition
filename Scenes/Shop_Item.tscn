@@ -1,0 +1,91 @@
+[gd_scene load_steps=6 format=3 uid="uid://dw4ndyxs5lxma"]
+
+[ext_resource type="Script" uid="uid://bqtns0ewhlj17" path="res://Scenes/shop_item.gd" id="1_a7bh2"]
+
+[sub_resource type="Animation" id="Animation_wa6yl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_x44w0"]
+resource_name = "hover_in"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1)]
+}
+
+[sub_resource type="Animation" id="Animation_jmrlc"]
+resource_name = "hover_out"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6o14k"]
+_data = {
+&"RESET": SubResource("Animation_wa6yl"),
+&"hover_in": SubResource("Animation_x44w0"),
+&"hover_out": SubResource("Animation_jmrlc")
+}
+
+[node name="Item (Panel Container)" type="PanelContainer" node_paths=PackedStringArray("anim_player")]
+custom_minimum_size = Vector2(150, 150)
+script = ExtResource("1_a7bh2")
+anim_player = NodePath("AnimationPlayer")
+
+[node name="VBox_Content" type="VBoxContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Name_Label" type="Label" parent="VBox_Content"]
+layout_mode = 2
+text = "Overclock Serum"
+horizontal_alignment = 1
+
+[node name="Icon_Space" type="Control" parent="VBox_Content"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Price_Label" type="Label" parent="VBox_Content"]
+layout_mode = 2
+text = "$500"
+horizontal_alignment = 1
+
+[node name="Buy_Button" type="Button" parent="VBox_Content"]
+layout_mode = 2
+mouse_filter = 2
+text = "BUY"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_6o14k")
+}
