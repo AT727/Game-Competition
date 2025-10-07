@@ -13,7 +13,7 @@ grow_vertical = 2
 script = ExtResource("1_xnvl7")
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,7 +23,7 @@ grow_vertical = 2
 texture = ExtResource("1_osffw")
 expand_mode = 1
 
-[node name="ColorRect" type="ColorRect" parent="TextureRect"]
+[node name="ColorRect" type="ColorRect" parent="Background"]
 layout_mode = 0
 offset_left = 45.0
 offset_top = 42.0
@@ -31,7 +31,7 @@ offset_right = 136.0
 offset_bottom = 90.0
 color = Color(0.7743293, 0, 0.26226863, 1)
 
-[node name="Button" type="Button" parent="TextureRect/ColorRect"]
+[node name="Button" type="Button" parent="Background/ColorRect"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 9.0

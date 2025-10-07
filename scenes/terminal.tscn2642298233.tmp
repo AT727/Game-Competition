@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbyk6728rn0w"]
+[gd_scene load_steps=3 format=3 uid="uid://cbyk6728rn0w"]
 
 [ext_resource type="Texture2D" uid="uid://ba5hlbgkehaqe" path="res://assets/white.jpg" id="1_m430i"]
-[ext_resource type="Script" uid="uid://mlq208ypkrdp" path="res://scripts/terminal/terminalinput.gd" id="1_vs6ym"]
 [ext_resource type="PackedScene" uid="uid://dnovoi2v2ctme" path="res://scenes/terminal miscs/Input.tscn" id="2_sy66w"]
 
 [node name="Control" type="Control"]
@@ -12,7 +11,6 @@ offset_right = 0.0078125
 offset_bottom = 0.00793457
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_vs6ym")
 
 [node name="Window" type="Window" parent="."]
 oversampling_override = 1.0
