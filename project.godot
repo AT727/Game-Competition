@@ -11,6 +11,24 @@ config_version=5
 [application]
 
 config/name="Game competition"
+<<<<<<< HEAD
 run/main_scene="uid://dshj0y74jtisv"
+=======
+run/main_scene="uid://cbyk6728rn0w"
+>>>>>>> refs/remotes/origin/master
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=900
+window/stretch/mode="canvas_items"
+
+[dotnet]
+
+project/assembly_name="Game competition"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbyk6728rn0w"]
+
+[ext_resource type="Texture2D" uid="uid://ba5hlbgkehaqe" path="res://assets/white.jpg" id="1_m430i"]
+[ext_resource type="PackedScene" uid="uid://dnovoi2v2ctme" path="res://scenes/terminal miscs/Input.tscn" id="2_sy66w"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchor_right = 1.6710001
+anchor_bottom = 1.6790001
+offset_right = 0.0078125
+offset_bottom = 0.00793457
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Window" type="Window" parent="."]
+oversampling_override = 1.0
+mode = 4
+initial_position = 1
+size = Vector2i(1920, 1080)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Window"]
+offset_right = 1920.0
+offset_bottom = 60.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Window/NinePatchRect"]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 1920.0
+offset_bottom = 60.0
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="Window/NinePatchRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_m430i")
+expand_mode = 2
+
+[node name="Button" type="Button" parent="Window/NinePatchRect/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Parent" type="MarginContainer" parent="Window"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Window/Parent"]
+layout_mode = 2
+
+[node name="BoxContainer" type="BoxContainer" parent="Window/Parent/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Control" type="Control" parent="Window/Parent/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Terminal Input" parent="Window/Parent/VBoxContainer" instance=ExtResource("2_sy66w")]
+layout_mode = 2
